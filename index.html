@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            border: 1px solid black;
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="container"></div>
+<script src="./waterfall.js"></script>
+<script>
+    let imgs = []
+    for (var i = 0; i <= 29; i++) {
+        imgs[i] = `./img/${i+1}.jpg`
+    }
+    myPlugins.createWaterFall({
+        container: document.querySelector('.container'),
+        imgs,
+        imgWidth:220,
+    })
+</script>
+</body>
+</html>
