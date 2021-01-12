@@ -14,6 +14,7 @@ window.myPlugins.createWaterFall = function (option) {
     function init (){
         setParentPostin();
         createImgDom();
+        let a = 'asdas'
         window.onresize = _debounce(setImgPosition, 100);
     }
 
