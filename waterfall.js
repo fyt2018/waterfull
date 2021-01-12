@@ -16,40 +16,9 @@ window.myPlugins.createWaterFall = function (option) {
         createImgDom();
         window.onresize = _debounce(setImgPosition, 100);
     }
-    function init2 (){
-        setParentPostin();
-        createImgDom();
-        window.onresize = _debounce(setImgPosition, 100);
-    }
+
     /**
      * 设置父元素的定位
-     */
-    function setParentPostin() {
-
-        let parent = option.container;
-        let position = getComputedStyle(parent).position;
-        if (position == 'static') {
-            parent.style.position = 'relative'
-        }
-    }
-
-    /**
-     *  创建img标签
-     */
-    function createImgDom() {
-        let debounce = _debounce(setImgPosition, 100);
-        for (var i = 0; i < option.imgs.length; i++) {
-            let img = document.createElement('img');
-            img.style.position = 'absolute';
-            img.style.width = option.imgWidth + 'px';
-            img.src = option.imgs[i];
-            imgDoms.push(img);
-            img.onload = function () {
-                debounce()
-            }
-            option.container.appendChild(img)
-        }
-    }
 
     /**
      *设置图片的位置
