@@ -16,7 +16,11 @@ window.myPlugins.createWaterFall = function (option) {
         createImgDom();
         window.onresize = _debounce(setImgPosition, 100);
     }
-
+    function init2 (){
+        setParentPostin();
+        createImgDom();
+        window.onresize = _debounce(setImgPosition, 100);
+    }
     /**
      * 设置父元素的定位
      */
